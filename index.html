@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
+>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+    <link href="style/starship.css" rel="stylesheet" />
+    <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+
+  </head>
+  <body>
+    <div id="body-wrapper">
+      <h3 id="game-status">&nbsp;</h3>
+      <section id="board-view">
+        <button id="view-my-board">My ships</button>
+        <button id="view-opponents-board">Enemy ships</button>
+      </section>
+      <div id="battleships">
+        <div class="board" id="board-mine"></div>
+        <div class="board" id="board-opponent"></div>
+        <div id="present"></div>
+      </div>
+      <footer id="controls">
+        <button id="new-game">New Game</button>
+        <button id="rotate-ship">Rotate</button>
+        <button id="clear-selection">Clear Selection</button>
+        <button id="random-positions">Random</button>
+        <button id="start-game">Start Game</button>
+      </footer>
+    </div>
+    <script src="js/starship.js"></script>
+    <script>
+        setTimeout(function () {   window.scrollTo(0, 1); }, 1000);
+    </script>
+  </body>
+</html>

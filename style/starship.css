@@ -1,0 +1,156 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  'Droid Sans Mono', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #adff2f;
+  background-image:url("img/spacebg2.jpg");
+  background-repeat: no-repeat;
+}
+
+button { 
+  font-family:  'Droid Sans Mono', sans-serif;
+  background: transparent;
+  color: #B0E562;
+}  
+
+h3 { 
+  font-size: 24px; 
+  font-weight: normal; 
+  margin: 0; 
+  line-height: 36px;
+}
+
+#body-wrapper {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.board {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #adff2f;
+  border-width: 0 0 1px 1px;
+}
+
+.board div {
+  float: left;
+  width: 10%;
+  height: 10%;
+  text-align: center;
+  font-family: monospace;
+  line-height: 230%;
+  overflow: hidden;
+  box-shadow:0 0 10px rgba(175, 228, 90, 0.2);
+  border: 1px solid #adff2f;
+  border-width: 1px 1px 0 0;
+  background-repeat: no-repeat;
+}
+
+.board div.selected {
+  background-color: lightblue;
+}
+
+#controls {
+  width: 100%;
+  display: -moz-box;
+  display: -webkit-box;
+}
+
+#controls button {
+  display: none;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  padding: 5px;
+  border: 0;
+  font-size: 16px;
+}
+
+/* #board-opponent { */
+/*   background: pink; */
+/* } */
+
+/* #board-mine { */
+/*   background: lightblue; */
+/* } */
+
+.ship {
+  background-image: url(img/ship.png);
+  background-size: 100%;
+  /* background: blue; */
+}
+
+.hit {
+  background-image: url(img/hit.gif);
+  background-size: 100%;
+}
+
+.miss {
+  background-image: url(img/missed.png);
+  background-size: 100%;
+}
+
+#board-mine, #board-opponent {
+  display: none;
+}
+
+.choosing-positions #rotate-ship,
+.choosing-positions #random-positions,
+.choosing-positions #start-game  {
+  display: block;
+}
+
+.player1-turn #restart-game, .player2-turn #restart-game {
+  display: block;
+}
+
+.player-won #new-game, .player-lost #new-game {
+  display: block;
+}
+
+#game-status {
+  text-align: center;
+  font-size: 20px;
+}
+
+#board-view {
+  display: -moz-box;
+  display: -webkit-box;
+  width: 100%;
+}
+
+#board-view button {
+  -moz-box-flex: 1;       /* Mozilla */
+  -webkit-box-flex: 1;    /* WebKit */
+  padding: 5px;
+  border: 0;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+#board-view button.selected {
+  opacity: 1;
+}
+
+#present { 
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background: url(img/ship.png);
+  background-size: 100%;
+  height: 24px;
+  width: 24px;
+  z-index: 500;
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+}
+
+#battleships { 
+  position: relative;
+}
